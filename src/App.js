@@ -1,5 +1,4 @@
-
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import './App.css';
 import Movie from './Movie';
 
@@ -30,7 +29,7 @@ class App extends Component {
     componentDidMount() {
         setTimeout(() => {
             this.setState({
-                greeting: "Hello again"
+                greeting: "Hello React"
             })
         }, 3000)
     }
@@ -39,17 +38,17 @@ class App extends Component {
         greeting: "Hello"
     }
 
-  render() {
+    render() {
         console.log('render')
-    return (
-      <div className="App">
-          {this.state.greeting}
-          {movies.map((movie, index) => {
-              return <Movie title={movie.title} poster={movie.poster} key={index} />
-          })}
-      </div>
-    );
-  }
+        return (
+            <div className="App">
+                {this.state.greeting}
+                {movies.map((movie, index) => {
+                    return <Movie title={movie.title} poster={movie.poster} key={index}/>
+                })}
+            </div>
+        );
+    }
 }
 
 export default App;

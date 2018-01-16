@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import './Movie.css';
 
@@ -10,9 +10,9 @@ class Movie extends Component {
 
     render() {
         console.log(this.props);
-        return(
+        return (
             <div>
-                <MoviePoster poster={this.props.poster} />
+                <MoviePoster poster={this.props.poster}/>
                 <h1>{this.props.title}</h1>
             </div>
         )
@@ -23,9 +23,10 @@ class MoviePoster extends Component {
     static propTypes = {
         poster: PropTypes.string.isRequired
     }
+
     render() {
-        return(
-            <img src={this.props.poster} widt="240" height="320" alt="" />
+        return (
+            <img src={this.props.poster} alt=""/>
         )
     }
 }
